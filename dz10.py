@@ -20,10 +20,33 @@
 # print(auto.brand)
 
 
+import time
+
+
+
+
 class Auto:
-class Truck(Auto):
-    def __init__(self,max_load):
-        self.max_load = max_load
     def move(self):
-        print("attention")
+        print('attention')
+
+class Truck(Auto):
+    def __init__(self, max_load, load):
+        self.max_load = max_load
+        self.load = load
+    def move(self):
+        super().move()
+
 class Car(Auto):
+    def move(self, max_speed):
+        self.max_speed = max_speed
+
+# print("attention")
+# print("move")
+time.sleep(1)
+print("load")
+time.sleep(1)
+
+
+
+class Car(Auto):
+    pass
